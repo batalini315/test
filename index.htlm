@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Тестовый html</title>
+		<script type="text/javascript" src="jQuery v3.js">
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+</script>
+	</head>
+		<div class="as1"> Привет</div>
+
+	<body>
+		
+		
+		
+		
+		
+		
+	
+<script>	
+		$(document).ready(function(){
+
+   $(".as1").click(function(event){
+      alert("Поздравляем! Вы починили код!");
+   });
+
+});
+</script>
+	
+	</body>
+
+</html>
