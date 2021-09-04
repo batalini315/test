@@ -1,30 +1,25 @@
-<html>
-	<head>
-		<title>Тестовый html</title>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-</script>
-	</head>
-		<div class="as1"> Привет, test</div>
+<?php
+require 'views/header.php';
 
-	<body>
-		
-		
-		
-		
-		
-		
-	
-<script>	
-		$(document).ready(function(){
+$nameFile =  stristr($fulGet, '/', true);
+if($nameFile == '') {
+    $nameFile =  $fulGet; 
+};
+print_r('nameFile  '.$nameFile);
+echo("<br>");
+$method = preg_replace("/.*?\//", '', $fulGet);
+echo "method ". $method;
+echo("<br>");
+echo("<br>");
 
-   $(".as1").click(function(event){
-      alert("Поздравляем! Вы починили код!");
-   });
+// $fn = ($p = key($_GET)) ? 'content/' . $p . '/index.php' : 'content/home/index.php';
+$fn = ($p = $fulGet) ? 'controls/' . $nameFile . '.php' : 'controls/home.php';
 
-});
-</script>
-	
-	</body>
-
-</html>
+echo("<br>");
+echo($fn);
+echo("<br>");
+(file_exists($fn)) ? require $fn : require 'controls/404.php'; 
+if( file_exists($fn) && is_numeric($method)) {
+    index($method);
+}
+require 'views/foter.php';
