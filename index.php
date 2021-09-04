@@ -1,13 +1,13 @@
 <?php
 require 'views/header.php';
-
+$fulGet = $_GET['page'];
 $nameFile =  stristr($fulGet, '/', true);
 if($nameFile == '') {
     $nameFile =  $fulGet; 
 };
 print_r('nameFile  '.$nameFile);
 echo("<br>");
-$method = preg_replace("/.*?\//", '', $fulGet);
+//$method = preg_replace("/.*?\//", '', $fulGet);
 echo "method ". $method;
 echo("<br>");
 echo("<br>");
@@ -23,3 +23,4 @@ if( file_exists($fn) && is_numeric($method)) {
     index($method);
 }
 require 'views/foter.php';
+?>

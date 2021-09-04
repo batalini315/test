@@ -6,8 +6,8 @@
   <p><input type="email" name="email"></p>
   <label for="name">Имя</label>
   <p><input type="text" name="name"></p>
-  <label for="addres">Адрес</label>
-  <p><input type="text" name="addres"></p>
+  <label for="address">Адрес</label>
+  <p><input type="text" name="address"></p>
   <label for="phone">Телефон</label>
   <p><input type="text" name="phone"></p>
   <label for="comment">Коментарий</label>
