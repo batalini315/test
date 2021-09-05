@@ -1,20 +1,20 @@
 <?php 
 echo("Add User");
-require_once 'module/users.php';
-$sqlUser = new Users();
+require_once 'module/divisions.php';
+$sqlDivision = new Divisions();
 function index($num) {
     // require 'controls/404.php';
-    echo 'users number'. $num;
+    echo 'divisions number'. $num;
 };
 echo '<br>  get  ';
 print_r($_GET);
-if($_GET['email']) {
-    if($sqlUser->IsMail($_GET['email'])){
+if($_GET['name_otdel']) {
+    if($sqlDivision->IsDivision($_GET['name_otdel'])){
         $errorString = "Duble error";
     }
     else {
-        $sqlUser->InsertUser($_GET);
-        Redirect('/users/', false);
+        $sqlDivision->InsertDivision($_GET['name_otdel']);
+        Redirect('/divisions/', false);
     }
 }
 
@@ -29,4 +29,4 @@ function Redirect($url, $permanent = false)
 }
 
 // Redirect('http://www.google.com/', false);
-require_once 'views/adduser.php';
+require_once 'views/addDivision.php';

@@ -14,7 +14,7 @@
   <p><input type="text" name="comment"></p>
   <label for="otdel">Отдел</label>
   <p><input type="text" name="otdel"></p>
-  <p><input type="submit" value="Отправить"></p>
+  <p><input type="submit" value="Добавить"></p>
  </form>
 </div>
     <div class="col"></div>

@@ -1,26 +1,6 @@
 <?php
+// php 7.3
 require 'views/header.php';
-$fulGet = $_GET['page'];
-$nameFile =  stristr($fulGet, '/', true);
-if($nameFile == '') {
-    $nameFile =  $fulGet; 
-};
-print_r('nameFile  '.$nameFile);
-echo("<br>");
-//$method = preg_replace("/.*?\//", '', $fulGet);
-echo "method ". $method;
-echo("<br>");
-echo("<br>");
-
-// $fn = ($p = key($_GET)) ? 'content/' . $p . '/index.php' : 'content/home/index.php';
-$fn = ($p = $fulGet) ? 'controls/' . $nameFile . '.php' : 'controls/home.php';
-
-echo("<br>");
-echo($fn);
-echo("<br>");
-(file_exists($fn)) ? require $fn : require 'controls/404.php'; 
-if( file_exists($fn) && is_numeric($method)) {
-    index($method);
-}
+require_once 'system/router.php';
 require 'views/foter.php';
 ?>
