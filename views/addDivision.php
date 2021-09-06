@@ -2,6 +2,7 @@
     <div class="col"></div>
     <div class="col">
         <h2>Новый отдел</h2>
+        
 <form action="adddivision" method="get">
     
   <label for="name">Название</label>

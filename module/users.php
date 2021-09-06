@@ -18,6 +18,15 @@
         $this->Insert($table, $cols, $vals);
 
     }
+    public function GetUserForId($id)
+    {
+        return $this->GetItemForId($id, 'users');
+    }
+
+    public function DeleteUser($id)
+    {
+        $this->DeleteItem($id,'users');
+    }
 }
     
 

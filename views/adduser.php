@@ -1,20 +1,36 @@
+<h2>Добавить нового сотрудника</h2>
 <div class="row align-items-start">
     <div class="col"></div>
     <div class="col">
 <form action="adduser" method="get">
-    <label for="email">Email</label>
-  <p><input type="email" name="email"></p>
-  <label for="name">Имя</label>
-  <p><input type="text" name="name"></p>
-  <label for="address">Адрес</label>
-  <p><input type="text" name="address"></p>
-  <label for="phone">Телефон</label>
-  <p><input type="text" name="phone"></p>
-  <label for="comment">Коментарий</label>
-  <p><input type="text" name="comment"></p>
-  <label for="otdel">Отдел</label>
-  <p><input type="text" name="otdel"></p>
-  <p><input type="submit" value="Добавить"></p>
+    <div clas="form-group"> 
+       <label for="email">Email</label>  
+       <input type="email" class="form-control" name="email">
+    </div>
+    <div class="form-group">
+      <label for="name">Имя</label>  
+      <input type="text" class="form-control" name="name">
+    </div>
+    <div class="form-group">
+      <label for="address">Адрес</label>  
+      <input type="text" class="form-control" name="address">
+    </div>
+    <div class="form-group">
+      <label for="phone">Телефон</label>
+      <input type="text" class="form-control" name="phone">
+    </div>
+    <div class="form-group">
+        <label for="comment">Коментарий</label>      
+        <input type="text" class="form-control" name="comment">
+    </div>    
+    <div class="form-group">    
+        <select class="form-select" aria-label="Default select example" name="otdel">
+            <?php foreach ($divisions as $value) {
+                echo('<option value="'.$value['id'].'">'.$value['name_otdel'].'</option>');
+            } ?>    
+        </select>
+    </div>
+  <div class="form-group"><input type="submit"  class="btn btn-primary" value="Добавить"></div>
  </form>
 </div>
     <div class="col"></div>

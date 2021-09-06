@@ -2,6 +2,9 @@
 echo("Add User");
 require_once 'module/users.php';
 $sqlUser = new Users();
+require_once 'module/divisions.php';
+$sqlDivisions = new Divisions();
+$divisions = $sqlDivisions->getDivisions();
 function index($num) {
     // require 'controls/404.php';
     echo 'users number'. $num;
@@ -27,6 +30,5 @@ function Redirect($url, $permanent = false)
 
     exit();
 }
-
 // Redirect('http://www.google.com/', false);
 require_once 'views/adduser.php';

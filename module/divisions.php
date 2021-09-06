@@ -1,7 +1,7 @@
 <?php
     require_once 'system/mysql.php';
     class Divisions  extends Mysql {
-        function getDivisions() {
+    function getDivisions() {
             $arr = $this->sql_query('SELECT * FROM otdel ORDER BY name_otdel DESC LIMIT 50');
         return $arr;
     }
@@ -17,5 +17,9 @@
         $vals ='"'. $name.'"';
         $this->Insert($table, $cols, $vals);
 
+    }
+    public function DeleteDivision($id)
+    {
+        $this->DeleteItem($id, 'otdel');
     }
 }

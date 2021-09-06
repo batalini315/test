@@ -26,6 +26,10 @@ class Mysql   extends Databasa {
         mysqli_close($link);
         return $arr;
     }
+    public function GetItemForId($id, $table)
+    {
+        return $this->sql_query('SELECT * FROM '.$table.' WHERE id = '. $id);
+    }
 
     public function IsRow($table, $argum, $where)
     {
@@ -100,7 +104,7 @@ class Mysql   extends Databasa {
     }
 
     $sql = "UPDATE ".$table." SET ".$cols_vars." WHERE id=".$id;
-
+print_r($sql);
     if ($conn->query($sql) === TRUE) {
     echo "Record updated successfully";
     } else {
@@ -109,5 +113,7 @@ class Mysql   extends Databasa {
 
     $conn->close();
     }
+
+    
 }
 ?>
