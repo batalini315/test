@@ -1,4 +1,5 @@
 <h2>Новый отдел</h2>
+
 <div class="row align-items-start">
     <div class="col"></div>
     <div class="col">

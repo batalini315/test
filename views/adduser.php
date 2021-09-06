@@ -1,4 +1,5 @@
 <h2>Добавить нового сотрудника</h2>
+<div class="alert alert-warning"><?=$errorString?></div>
 <div class="row align-items-start">
     <div class="col"></div>
     <div class="col">
