@@ -1,5 +1,4 @@
 <?php 
-echo("Add User");
 require_once 'module/users.php';
 $sqlUser = new Users();
 require_once 'module/divisions.php';
@@ -9,8 +8,6 @@ function index($num) {
     // require 'controls/404.php';
     echo 'users number'. $num;
 };
-echo '<br>  get  ';
-print_r($_GET);
 if($_GET['email']) {
     if($sqlUser->IsMail($_GET['email'])){
         $errorString = "Duble error";

@@ -1,12 +1,10 @@
 <?php
     function index($id) {
-        echo $id;
         require_once 'module/divisions.php';
         $sqlDivisions = new Divisions();
         $divisions = $sqlDivisions->getDivisions();        
         $division = $sqlDivisions->GetItemForId($id, 'otdel');
         $division = $division[0];
-        print_r($division);
 
         require_once 'views/updivision.php';
     }
